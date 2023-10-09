@@ -23,14 +23,12 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
         this.songsList = songsList;
         this.context = context;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.recycler_item, parent, false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         AudioModel songData = songsList.get(position);
